@@ -13,7 +13,7 @@ sh 'mvn clean install'
 }
 stage('deploy'){
 steps{
-sh 'sudo cp -f /var/lib/jenkins/workspace/pipeline/target/zomato-1.0.jar' /opt/tomcat9/webapps'
+sh 'sudo cp -f /var/lib/jenkins/workspace/pipeline/target/zomato-1.0.war' /opt/tomcat9/webapps'
 }
 }
 }
