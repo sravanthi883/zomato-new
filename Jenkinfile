@@ -6,5 +6,15 @@ steps{
 git credentialsId: 'github-credenitals', url: 'https://github.com/sravanthi883/zomato-new.git'
 }
 }
+stage('build1'){
+steps{
+sh 'mvn clean install'
+}
+}
+stage('deploy'){
+steps{
+sh '/var/lib/jenkins/workspace/pipeline/target/zomato-1.0.jar' /opt/tomcat9/webapps'
+}
+}
 }
 }
